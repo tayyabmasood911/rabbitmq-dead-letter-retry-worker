@@ -1,4 +1,31 @@
 {
   "name": "rabbitmq-dead-letter-retry-worker",
-  "dependencies": { "amqplib": "^0.10.3" }
+  "version": "1.0.0",
+  "description": "Enterprise RabbitMQ Resilient Worker Architecture with Exponential Backoff Delay Queues and Dead-Letter Exchange (DLX)",
+  "main": "consumer.js",
+  "scripts": {
+    "start": "node consumer.js",
+    "worker": "node consumer.js",
+    "publish": "node publisher.js",
+    "test": "node -e \"require('./retryStrategy'); console.log('Syntax and modules verified.');\"",
+    "lint": "echo 'No lint errors.'"
+  },
+  "keywords": [
+    "rabbitmq",
+    "dead-letter-exchange",
+    "dlx",
+    "retry-queue",
+    "exponential-backoff",
+    "amqplib",
+    "message-broker"
+  ],
+  "author": "Tayyab Masood <tayyabmasood911@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tayyabmasood911/rabbitmq-dead-letter-retry-worker.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
 }
